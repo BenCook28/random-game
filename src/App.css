@@ -2,24 +2,34 @@
   text-align: center;
 }
 
-.App-header {
+.App-header123#RandomGame {
   background-color: #222;
-  height: 3rem;
-  padding: 20px;
-  color: white;
+  height: 10rem;
+  padding: 0.5rem;
+  color: #ffffff !important;
 }
 
-.h1 {
+/* .h1 {
   color: white;
-}
+} */
 
-.App-title {
-  font-size: 1.5em;
-  color: white;
+.App-title123 {
+  font-size: 5rem;
+  color: #ffffff !important;
 }
 
 .App-intro {
   font-size: large;
+  padding-left: -100rem;
+}
+
+.form-group {
+  width: 75rem;
+  padding-left: 50rem;
+}
+
+.button-for-submitting-games {
+  padding-left: 50rem
 }
 
 @keyframes App-logo-spin {
