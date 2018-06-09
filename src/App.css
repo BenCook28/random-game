@@ -32,6 +32,10 @@
   padding-left: 50rem
 }
 
+.button-for-random {
+  padding-left: 50rem
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
