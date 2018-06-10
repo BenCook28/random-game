@@ -25,16 +25,12 @@ class App extends Component {
   updateGame = (entered) => {
     this.setState({
       game: entered.target.value
-    }, () => {
-      console.log('state after updating game is now ', this.state.game);
     })
   }
 
   addToArray = () => {
     this.setState({
       games: [...this.state.games, this.state.game]
-    }, () => {
-      console.log('state after submit is now ', this.state);
     })
   }
 
