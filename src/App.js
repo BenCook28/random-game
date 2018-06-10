@@ -52,9 +52,13 @@ class App extends Component {
         <header className="App-header123" id="RandomGame">
           <h1 className="App-title123" >Random Game Picker</h1>
         </header>
+
+        < br />
+
         <p className="App-intro">
           Please Enter the Game's Name
         </p>
+
         <form>
           <div className='form-group'>
             <input
@@ -72,6 +76,9 @@ class App extends Component {
             <Button bsStyle="primary" onClick={this.addToArray}>Submit</Button>
           </ButtonToolbar>
         </div>
+
+        < br />
+
         <div>
           <p className="App-intro">
             We're considering these games
@@ -87,6 +94,9 @@ class App extends Component {
             <Button bsStyle="primary" onClick={this.displayResult}>Magic</Button>
           </ButtonToolbar>
         </div>
+
+        < br />
+
         <div>{result}</div>
       </div >
     );
