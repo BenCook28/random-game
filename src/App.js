@@ -30,7 +30,8 @@ class App extends Component {
 
   addToArray = () => {
     this.setState({
-      games: [...this.state.games, this.state.game]
+      games: [...this.state.games, this.state.game],
+      game: ''
     })
   }
 
@@ -69,7 +70,7 @@ class App extends Component {
         </form>
         <div className='button-for-submitting-games'>
           <ButtonToolbar>
-            <Button bsStyle="primary" onClick={this.addToArray}>Submit</Button>
+            <Button bsStyle="primary" onClick={this.addToArray}>Add</Button>
           </ButtonToolbar>
         </div>
 
