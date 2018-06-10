@@ -9,8 +9,17 @@ class App extends Component {
 
     this.state = {
       game: '',
-      games: []
+      games: [],
+      showResult: false
     }
+  }
+
+  getRandomInt = () => {
+    return Math.floor(Math.random() * Math.floor(this.state.games.length));
+  }
+
+  displayResult = () => {
+    this.setState({ showResult: true })
   }
 
   updateGame = (entered) => {
@@ -30,6 +39,10 @@ class App extends Component {
   }
 
   render() {
+    let result = <p></p>;
+    if (this.state.showResult) {
+      result = <p>{this.state.games[this.getRandomInt()]}</p>
+    }
     return (
       <div className="App">
         <header className="App-header123" id="RandomGame">
@@ -67,9 +80,10 @@ class App extends Component {
         </div>
         <div className='button-for-random'>
           <ButtonToolbar>
-            <Button bsStyle="primary" onClick={this.newTypeToDatabase}>Magic</Button>
+            <Button bsStyle="primary" onClick={this.displayResult}>Magic</Button>
           </ButtonToolbar>
         </div>
+        <div>{result}</div>
       </div >
     );
   }
