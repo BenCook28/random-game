@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, ButtonToolbar, FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
+import { Button, ButtonToolbar } from 'react-bootstrap';
 
 class App extends Component {
 
@@ -8,19 +8,27 @@ class App extends Component {
     super(props)
 
     this.state = {
+      game: '',
       games: []
     }
   }
 
-  addToArray = () => {
-
-  }
-
-  updateName = (e) => {
+  updateGame(entered) {
     this.setState({
-      games: [...this.state.games, e]
+      game: entered.target.value
+    }, () => {
+      console.log('state after updating game is now ', this.state.game);
     })
   }
+
+  addToArray = () => {
+    this.setState({
+      games: [...this.state.games, this.state.game]
+    }, () => {
+      console.log('state after submit is now ', this.state);
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,8 +45,9 @@ class App extends Component {
               className="form-control"
               name="game"
               placeholder="name"
+              onChange={this.updateGame}
+              value={this.state.game}
             />
-
           </div>
         </form>
         <div className='button-for-submitting-games'>
