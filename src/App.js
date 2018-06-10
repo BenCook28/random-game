@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  updateGame(entered) {
+  updateGame = (entered) => {
     this.setState({
       game: entered.target.value
     }, () => {
