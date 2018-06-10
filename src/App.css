@@ -24,16 +24,16 @@
 }
 
 .form-group {
-  width: 75rem;
-  padding-left: 50rem;
+  width: 20%;
+  margin-left: 40%
 }
 
 .button-for-submitting-games {
-  padding-left: 50rem
+  margin-left: 40%
 }
 
 .button-for-random {
-  padding-left: 50rem
+  margin-left: 40%
 }
 
 @keyframes App-logo-spin {

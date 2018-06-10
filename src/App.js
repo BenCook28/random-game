@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Grid, Col } from 'react-flexbox-grid';
 
 class App extends Component {
 
@@ -45,57 +46,65 @@ class App extends Component {
         </div>
     }
     return (
-      <div className="App">
-        <header className="App-header123" id="RandomGame">
-          <h1 className="App-title123" >Random Game Picker</h1>
-        </header>
+      <Grid fluid>
+        <Col>
+          <div className="App">
+            <header className="App-header123" id="RandomGame">
+              <h1 className="App-title123" >Random Game Picker</h1>
+            </header>
 
-        < br />
+            < br />
 
-        <p className="App-intro">
-          Please Enter the Game's Name
+            <p className="App-intro">
+              Please Enter the Game's Name
         </p>
 
-        <form>
-          <div className='form-group'>
-            <input
-              type="text"
-              className="form-control"
-              name="game"
-              placeholder="name"
-              onChange={this.updateGame}
-              value={this.state.game}
-            />
-          </div>
-        </form>
-        <div className='button-for-submitting-games'>
-          <ButtonToolbar>
-            <Button bsStyle="primary" onClick={this.addToArray}>Add</Button>
-          </ButtonToolbar>
-        </div>
+            <form>
+              <div className='form-group'>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="game"
+                  placeholder="name"
+                  onChange={this.updateGame}
+                  value={this.state.game}
+                />
+              </div>
+            </form>
+            <div className='button-for-submitting-games'>
 
-        < br />
+              <ButtonToolbar>
+                <center>
+                  <Button bsStyle="primary" onClick={this.addToArray}>Add</Button>
+                </center>
+              </ButtonToolbar>
 
-        <div>
-          <p className="App-intro">
-            We're considering these games
+            </div>
+
+            < br />
+
+            <div>
+              <p className="App-intro">
+                We're considering these games
           </p>
-          <ul>
-            {this.state.games.map((item, index) =>
-              <li key={index}>{item}</li>
-            )}
-          </ul>
-        </div>
-        <div className='button-for-random'>
-          <ButtonToolbar>
-            <Button bsStyle="primary" onClick={this.displayResult}>Magic</Button>
-          </ButtonToolbar>
-        </div>
+              <ul>
+                {this.state.games.map((item, index) =>
+                  <li key={index}>{item}</li>
+                )}
+              </ul>
+            </div>
+            <div className='button-for-random'>
+              <ButtonToolbar>
+                <Button bsStyle="primary" onClick={this.displayResult}>Magic</Button>
+              </ButtonToolbar>
+            </div>
 
-        < br />
+            < br />
 
-        <div>{result}</div>
-      </div >
+            <div>{result}</div>
+          </div >
+        </Col>
+      </Grid>
     );
   }
 }
