@@ -41,7 +41,11 @@ class App extends Component {
   render() {
     let result = <p></p>;
     if (this.state.showResult) {
-      result = <p>{this.state.games[this.getRandomInt()]}</p>
+      result =
+        <div>
+          <p>How about we play the game below?</p>
+          <p>{this.state.games[this.getRandomInt()]}</p>
+        </div>
     }
     return (
       <div className="App">
