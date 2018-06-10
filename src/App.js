@@ -58,7 +58,12 @@ class App extends Component {
         <div>
           <p className="App-intro">
             We're considering these games
-        </p>
+          </p>
+          <ul>
+            {this.state.games.map((item, index) =>
+              <li key={index}>{item}</li>
+            )}
+          </ul>
         </div>
         <div className='button-for-random'>
           <ButtonToolbar>
